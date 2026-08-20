@@ -1,0 +1,118 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --theme-color: rgb(88, 30, 224);
+}
+
+/* Background */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+/* Header */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--theme-color);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+/* Navigation bar title */
+
+#title-h {
+    margin-left: 4rem;
+    color: white;
+}
+
+#title-h span {
+    color: orange;
+}
+
+/* Navigation bar */
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links {
+    display: block;
+    position: relative;
+    margin: 1.2rem 4rem 1.2rem 0;
+    text-decoration: none;
+    color: white;
+    transition: 0.55s;
+}
+
+.nav-links:hover {
+    color: orange;
+}
+
+/* Section - Overview */
+
+#overview {
+    position: relative;
+    height: auto;
+}
+
+img[alt="mac"] {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: -1;
+}
+
+/* Section - Music */
+
+#music {
+    height: 700px;
+    background: url("../res/hero_image.png") no-repeat center center/cover;
+}
+
+/* Section - Video */
+
+#video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    background: url("../res/video.png") no-repeat center center/cover;
+}
+
+.play {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 50%;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Section - Gift cards */
+
+#gift-cards {
+    height: auto;
+}
+
+img[alt="gift cards"] {
+    float: left;
+}
+
+.gift {
+    display: inline;
+}
