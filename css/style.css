@@ -1,96 +1,118 @@
-/* CSS for all */
+/* CSS reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
+:root {
+    --theme-color: rgb(88, 30, 224);
+}
+
+/* Background */
+
 body {
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+/* Header */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--theme-color);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+/* Navigation bar title */
+
+#title-h {
+    margin-left: 4rem;
+    color: white;
+}
+
+#title-h span {
+    color: orange;
+}
+
+/* Navigation bar */
+
+header nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: black;
+}
+
+.nav-links {
+    display: block;
+    position: relative;
+    margin: 1.2rem 4rem 1.2rem 0;
+    text-decoration: none;
     color: white;
-    height: 100vh;
-    font-size: 2.1rem;
+    transition: 0.55s;
 }
 
-/* Container */
-
-.container {
-    display: flex;
-    flex-direction: column;
-    width: 325px;
-    border-radius: 20px;
-    padding: 15px 8px;
-    background: linear-gradient(40deg, #121213, #252527);
-    box-shadow: 0 0 4px darkgrey, 0 0 12px rgb(82, 81, 81);
+.nav-links:hover {
+    color: orange;
 }
 
-/* Display */
+/* Section - Overview */
 
-.vport {
-    padding: 20px 12px;
-    margin: 15px 18px 5px 18px;
-    text-align: right;
-    background: linear-gradient(30deg, #161616, #121213);
-    border-radius: 10px;
-    box-shadow: inset 2px 2px 12px black;
-    overflow: hidden;
-    -webkit-user-drag: none;
+#overview {
+    position: relative;
+    height: auto;
 }
 
-/* Keys */
-
-.keys button {
-    padding: 19px 10px;
-    border: none;
-    border-radius: 50%;
-    width: 20.5%;
-    height: 20%;
-    font-size: 1.05rem;
-    font-weight: normal;
-    color: aliceblue;
-    background: #191a19;
-    box-shadow: 5px 5px 12px black, -5px -5px 12px #2f2f31;
-    transition: 0.06s;
-    user-select: none;
-    -webkit-user-drag: none;
-    cursor: pointer;
+img[alt="mac"] {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: -1;
 }
 
-.keys button:active {
-    box-shadow: 2px 2px 12px black, -2px -2px 12px #2f2f31;
-    background: #161616;
+/* Section - Music */
+
+#music {
+    height: 700px;
+    background: url("../res/hero_image.png") no-repeat center center/cover;
 }
 
-.keys button::selection {
-    border: transparent;
-    outline: transparent;
-}
+/* Section - Video */
 
-.each-row {
+#video {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin: 17px;
+    justify-content: center;
+    height: 700px;
+    background: url("../res/video.png") no-repeat center center/cover;
 }
 
-.keys .row-1 button {
-    color: rgb(0, 217, 255);
+.play {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 50%;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.keys .operator {
-    color: rgb(0, 217, 255);
-    font-weight: bold;
+/* Section - Gift cards */
+
+#gift-cards {
+    height: auto;
 }
 
-.row-5 button:last-child {
-    background: hsl(25, 100%, 45%);
-
+img[alt="gift cards"] {
+    float: left;
 }
 
-.row-5 button:last-child:active {
-    background: hsl(25, 100%, 30%);
+.gift {
+    display: inline;
 }
