@@ -5,58 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <title>Smusic | Sayon Mitra</title>
+    <title>Simple Modern Calculator</title>
 </head>
 
 <body>
-    <header>
-        <h2 id="title-h"><span>S</span>Music</h2>
-        <nav>
-            <a href="#overview" class="nav-links">Overview</a>
-            <a href="#music" class="nav-links">Music</a>
-            <a href="#video" class="nav-links">Video</a>
-            <a href="#gift-cards" class="nav-links">Gift Cards</a>
-        </nav>
-    </header>
+    <div class="container">
+        <div class="vport">0</div>
+        <div class="keys">
+            <div class="each-row row-1">
+                <button onclick="setDefaultViewPortValue()">AC</button>
+                <button onclick="backspaceViewPort()">DEL</button>
+                <button class="operator" onclick="addToViewPort('%')">%</button>
+                <button class="operator" onclick="addToViewPort('/')">/</button>
 
-    <section id="overview">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque architecto dignissimos debitis minima adipisci
-        deleniti. Soluta, rerum deleniti molestiae sunt, rem quo ut ipsa dicta fugit saepe laboriosam doloremque optio?
-        <img src="res/ipad-iphone.png" alt="ipad-iphone">
-        <img src="res/mac.png" alt="mac">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi minus a obcaecati natus non maxime odit quod
-        fuga corporis reprehenderit pariatur temporibus quis facere quas corrupti eius rerum, nobis ut iste labore aut
-        illo amet mollitia? Dignissimos repellat eum eos.
-    </section>
+            </div>
+            <div class="each-row row-2">
+                <button onclick="addToViewPort('7')">7</button>
+                <button onclick="addToViewPort('8')">8</button>
+                <button onclick="addToViewPort('9')">9</button>
+                <button class="operator" onclick="addToViewPort('*')">*</button>
+            </div>
+            <div class="each-row row-3">
+                <button onclick="addToViewPort('4')">4</button>
+                <button onclick="addToViewPort('5')">5</button>
+                <button onclick="addToViewPort('6')">6</button>
+                <button class="operator" onclick="addToViewPort('-')">-</button>
+            </div>
+            <div class="each-row row-4">
+                <button onclick="addToViewPort('1')">1</button>
+                <button onclick="addToViewPort('2')">2</button>
+                <button onclick="addToViewPort('3')">3</button>
+                <button class="operator" onclick="addToViewPort('+')">+</button>
+            </div>
+            <div class="each-row row-5">
+                <button onclick="addToViewPort('00')">00</button>
+                <button onclick="addToViewPort('0')">0</button>
+                <button class="operator" onclick="addToViewPort('.')">.</button>
+                <button onclick="displayCalculation()">=</button>
+            </div>
+        </div>
+    </div>
 
-    <section id="music">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi minus a obcaecati natus non maxime odit quod
-        fuga corporis reprehenderit pariatur temporibus quis facere quas corrupti eius rerum, nobis ut iste labore aut
-        illo amet mollitia? Dignissimos repellat eum eos.
-    </section>
-
-    <section id="video">
-        <div class="play">Play</div>
-    </section>
-
-    <section id="gift-cards">
-        <img src="res/gift_card.png" alt="gift cards">
-        <p class="gift">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ad doloribus sapiente? Id ad nihil assumenda
-            accusantium laboriosam amet. Qui deleniti voluptates error tenetur sed, nostrum delectus accusantium sit
-            recusandae voluptate tempore dignissimos modi voluptas ipsa exercitationem vitae dolor suscipit architecto
-            vero inventore maxime eaque! Sapiente iusto odio quas aperiam iste nihil accusantium, et aliquam pariatur
-            delectus officia voluptatibus eligendi laboriosam corrupti nesciunt minus?Lorem ipsum, dolor sit amet
-            consectetur adipisicing elit. Culpa ea laborum et repellendus, quidem totam perferendis quisquam alias
-            corrupti nemo assumenda animi a, eius inventore? Ducimus voluptates iusto accusantium tenetur aut laudantium
-            voluptate ut illo vero qui! Blanditiis sit, totam et modi consequuntur rerum consequatur officia placeat!
-            Dolor optio deserunt perspiciatis, debitis corporis consequatur? Modi veritatis assumenda quod ipsa
-            architecto magni, sapiente laboriosam vero!
-        </p>
-    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.0/math.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
