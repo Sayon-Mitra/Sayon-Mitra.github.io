@@ -1,96 +1,170 @@
-/* CSS for all */
+/* css reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Variables */
+
+:root {
+    --theme-color: rgba(255, 51, 0, 0.911);
+    --theme-on:  rgb(255, 51, 0);
+}
+
+/* Background */
+
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: black;
-    color: white;
+    width: 100%;
     height: 100vh;
-    font-size: 2.1rem;
+    background: url("https://i.imgur.com/It2UuVm.jpeg") no-repeat center center/cover;
+}
+
+/* Credit to the Image */
+#credit {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    font-size: 10px;
+    color: white;
 }
 
 /* Container */
 
 .container {
-    display: flex;
     flex-direction: column;
-    width: 325px;
-    border-radius: 20px;
-    padding: 15px 8px;
-    background: linear-gradient(40deg, #121213, #252527);
-    box-shadow: 0 0 4px darkgrey, 0 0 12px rgb(82, 81, 81);
-}
-
-/* Display */
-
-.vport {
-    padding: 20px 12px;
-    margin: 15px 18px 5px 18px;
-    text-align: right;
-    background: linear-gradient(30deg, #161616, #121213);
+    width: 350px;
+    height: 550px;
+    margin: 10px;
     border-radius: 10px;
-    box-shadow: inset 2px 2px 12px black;
     overflow: hidden;
-    -webkit-user-drag: none;
+    background: rgb(28, 24, 48);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* Keys */
+/* Profile */
 
-.keys button {
-    padding: 19px 10px;
-    border: none;
+.container .main .intro .imgBx {
+    width: 100px;
+    height: 100px;
+    background: white;
+    overflow: hidden;
+    border: 4px solid var(--theme-color);
     border-radius: 50%;
-    width: 20.5%;
-    height: 20%;
-    font-size: 1.05rem;
-    font-weight: normal;
-    color: aliceblue;
-    background: #191a19;
-    box-shadow: 5px 5px 12px black, -5px -5px 12px #2f2f31;
-    transition: 0.06s;
-    user-select: none;
-    -webkit-user-drag: none;
+    animation: borders 3s infinite;
+}
+
+@keyframes borders {
+    0% {
+        border: 4px solid var(--theme-color);
+    }
+    50% {
+        border: 4px solid rgb(136, 255, 0);
+    }
+    100% {
+        border: 4px solid var(--theme-color);
+    }
+}
+
+.container .main .intro .imgBx img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .main .intro h2 {
+    color: white;
+}
+
+.container .main .intro p {
+    color: var(--theme-color);
+}
+
+.container .main .intro {
+    flex-direction: column;
+}
+
+/* Links */
+
+.container .main .links a {
+    text-decoration: none;
+}
+
+.container .main .links a img {
+    transition: 0.55s;
+    width: 24px;
+}
+
+/* Contact Me button */
+
+.container .main .contact-btn {
+    padding: 10px 50px;
+    color: var(--theme-on);
+    background: transparent;
+    border: 1px solid var(--theme-on);
+    border-radius: 5px;
     cursor: pointer;
+    transition: 0.55s;
 }
 
-.keys button:active {
-    box-shadow: 2px 2px 12px black, -2px -2px 12px #2f2f31;
-    background: #161616;
+.container .main .contact-btn:hover {
+    color: white;
+    background: var(--theme-on);
 }
 
-.keys button::selection {
-    border: transparent;
-    outline: transparent;
+/* Main */
+
+.container .main {
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
 }
 
-.each-row {
+/* Stats */
+
+.stats {
+    background: white;
+    width: 100%;
+    height: 30%;
+}
+
+.stats .stat {
+    width: 33%;
+    height: 30px;
+    flex-direction: column;
+    background: white;
+    border-right: 1px solid rgb(175, 175, 175);
+}
+
+.stat:last-child {
+    border: none;
+}
+
+.stats .stat p small {
+    color: var(--theme-color);
+}
+
+/* Utility classes */
+
+.flex-center {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin: 17px;
+    justify-content: center;
 }
 
-.keys .row-1 button {
-    color: rgb(0, 217, 255);
+.y-margin {
+    margin: 10px 0;
 }
 
-.keys .operator {
-    color: rgb(0, 217, 255);
-    font-weight: bold;
+.top-margin {
+    margin-top: 7px;
 }
 
-.row-5 button:last-child {
-    background: hsl(25, 100%, 45%);
-
+.x-margin {
+    margin: 0 10px;
 }
 
-.row-5 button:last-child:active {
-    background: hsl(25, 100%, 30%);
+.fonts {
+    font-family: 'Poppins', sans-serif;
 }
