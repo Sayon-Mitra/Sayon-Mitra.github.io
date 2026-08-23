@@ -18,7 +18,7 @@
 body {
     width: 100%;
     height: 100vh;
-    background: url("https://i.imgur.com/It2UuVm.jpeg") no-repeat center center/cover;
+    background: url("res/bg.jpg") no-repeat center center/cover;
 }
 
 /* Credit to the Image */
@@ -52,7 +52,7 @@ body {
     overflow: hidden;
     border: 4px solid var(--theme-color);
     border-radius: 50%;
-    animation: borders 3s infinite;
+    animation: borders 5s infinite;
 }
 
 @keyframes borders {
